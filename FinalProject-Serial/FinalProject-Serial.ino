@@ -1,4 +1,4 @@
-#include <ArduinoJson.h>
+//#include <ArduinoJson.h>
 
 
 // // project variables
@@ -43,25 +43,6 @@ void loop() {
     }
   }
     delay(10); 
-
- // // read pins
-//   a0Val = analogRead(A0);
-//   d2Val = digitalRead(2);
-
-//   // calculate if d2 was clicked
-//   if (d2Val && d2Val != prevD2Val) {
-//     d2ClickCount++;
-//   }
-
-//   prevD2Val = d2Val;
-
-//   // check if there was a request for data, and if so, send new data
-//   if (Serial.available() > 0) {
-//     int byteIn = Serial.read();
-//     if (byteIn == 0xAB) {
-//       Serial.flush();
-//       sendData();
-//     }
 
 }
 
