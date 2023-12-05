@@ -1,20 +1,22 @@
-// serial variables
 let mSerial;
-
 let readyToRead;
 
-function character1() {
-  
-}
+// function character1() {
+
+// }
+// function character2() {
+
+// }
+// function character3() {
+
+// }
+// function character4() {
+
+// }
 
 function connectToSerial() {
-//if (!mSerial.opened()) {
   mSerial.open(9600);
   readyToRead = true; 
-
-//     readyToReceive = true;
-//     connectButton.hide();
-//   }
 }
 
 function setup() {
@@ -31,10 +33,10 @@ function setup() {
 }
 
 function draw() {
-  // project logic
+
   background(0);
 
-  if(readyToRead) {
+  if (mSerial.opened() && readyToRead) {
     mSerial.clear(); 
     mSerial.write(10); 
     readyToRead = false;
@@ -44,21 +46,11 @@ function draw() {
     print(mline); 
     readyToRead = true;
   }
+
+  // drawing characters on homepage
+    //character1(); 
+    //character2(); 
+    //character3(); 
+    //character4();
 }
-  // for (let i = 0; i < mElls.length; i++) {
-  //   let me = mElls[i];
-  //   fill(me.c, 0, 0);
-  //   ellipse(me.x, me.y, me.d, me.d);
-  // }
-
-  // // update serial: request new data
-  // if (mSerial.opened() && readyToReceive) {
-  //   readyToReceive = false;
-  //   mSerial.clear();
-  //   mSerial.write(0xab);
-  // }
-
-  // // update serial: read new data
-  // if (mSerial.availableBytes() > 8) {
-  //   receiveSerial();
-  // }
+  

@@ -34,12 +34,12 @@ void setup() {
 
 void loop() {
   int d0 = digitalRead(2); 
-  int d1 = digitalRead(3); 
+  int d1 = digitalRead(3);
+  //Serial.println(String(d0) + " " + d1);
   if(Serial.available() > 0) {
     int inByte = Serial.read(); 
     if(inByte == 10) {
-       Serial.println(d0); 
-       Serial.println(d1);
+      Serial.println(String(d0) + " " + d1);
     }
   }
     delay(10); 
