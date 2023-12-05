@@ -1,50 +1,53 @@
 // serial variables
 let mSerial;
 
-let connectButton;
+let readyToRead;
 
-let readyToReceive;
+// let connectButton;
 
-// project variables
-let mElls = [];
+// let readyToReceive;
 
-function receiveSerial() {
-  let line = mSerial.readUntil("\n");
-  trim(line);
-  if (!line) return;
+// // project variables
+// let mElls = [];
 
-  if (line.charAt(0) != "{") {
-    print("error: ", line);
-    readyToReceive = true;
-    return;
-  }
+// function receiveSerial() {
+//   let line = mSerial.readUntil("\n");
+//   trim(line);
+//   if (!line) return;
 
-  // get data from Serial string
-  let data = JSON.parse(line).data;
-  let a0 = data.A0;
-  let d2 = data.D2;
+//   if (line.charAt(0) != "{") {
+//     print("error: ", line);
+//     readyToReceive = true;
+//     return;
+//   }
 
-  // use data to update project variables
-  if (d2.isPressed) {
-    mElls.push({
-      x: random(width),
-      y: random(height),
-      c: map(d2.count % 20, 0, 20, 155, 255),
-      d: map(a0.value, 0, 4095, 20, 200),
-    });
-  }
+//   // get data from Serial string
+//   let data = JSON.parse(line).data;
+//   let a0 = data.A0;
+//   let d2 = data.D2;
 
-  // serial update
-  readyToReceive = true;
-}
+//   // use data to update project variables
+//   if (d2.isPressed) {
+//     mElls.push({
+//       x: random(width),
+//       y: random(height),
+//       c: map(d2.count % 20, 0, 20, 155, 255),
+//       d: map(a0.value, 0, 4095, 20, 200),
+//     });
+//   }
+
+//   // serial update
+//   readyToReceive = true;
+// }
 
 function connectToSerial() {
-  if (!mSerial.opened()) {
-    mSerial.open(9600);
+//if (!mSerial.opened()) {
+  mSerial.open(9600);
+  readyToRead = true; 
 
-    readyToReceive = true;
-    connectButton.hide();
-  }
+//     readyToReceive = true;
+//     connectButton.hide();
+//   }
 }
 
 function setup() {
@@ -52,11 +55,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   // setup serial
-  readyToReceive = false;
-
   mSerial = createSerial();
+  readyToRead = false;
 
-  connectButton = createButton("Connect To Serial");
+  let connectButton = createButton("Connect To Serial");
   connectButton.position(width / 2, height / 2);
   connectButton.mousePressed(connectToSerial);
 }
@@ -64,21 +66,32 @@ function setup() {
 function draw() {
   // project logic
   background(0);
-  for (let i = 0; i < mElls.length; i++) {
-    let me = mElls[i];
-    fill(me.c, 0, 0);
-    ellipse(me.x, me.y, me.d, me.d);
-  }
 
-  // update serial: request new data
-  if (mSerial.opened() && readyToReceive) {
-    readyToReceive = false;
-    mSerial.clear();
-    mSerial.write(0xab);
+  if(readyToRead) {
+    mSerial.clear(); 
+    mSerial.write(10); 
+    readyToRead = false;
   }
-
-  // update serial: read new data
-  if (mSerial.availableBytes() > 8) {
-    receiveSerial();
+  if (mSerial.opened() && mSerial.availableBytes()>0) {
+    let mline = mSerial.readUntil("\n"); 
+    print(mline); 
+    readyToRead = true;
   }
 }
+  // for (let i = 0; i < mElls.length; i++) {
+  //   let me = mElls[i];
+  //   fill(me.c, 0, 0);
+  //   ellipse(me.x, me.y, me.d, me.d);
+  // }
+
+  // // update serial: request new data
+  // if (mSerial.opened() && readyToReceive) {
+  //   readyToReceive = false;
+  //   mSerial.clear();
+  //   mSerial.write(0xab);
+  // }
+
+  // // update serial: read new data
+  // if (mSerial.availableBytes() > 8) {
+  //   receiveSerial();
+  // }
