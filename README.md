@@ -27,6 +27,7 @@ FSM and circuit diagram respectively
 ![Alt text](IMG_4473.jpg)
 Image of circuit
 
-
+For Next week: 
+I want to ensure that my code components have been laid out correctly. If so, I will start fleshing them out. I also want to figure out how to use the buttons, and what code should go in regards to the buttons in the Arduino and VS Code. 
 
 
