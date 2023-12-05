@@ -16,7 +16,7 @@ Pseudocode or an outline of how you plan to organize your code:
 Documentation of visual experiments: 
   ![Alt text](IMG_4474.jpg)
 Description of any code written so far: 
-  Currently, I have laid out a rough layout of what conponents will make up the code. 
+  Currently, I have laid out a rough layout of what components will make up the code. 
 
 HW12: 
 I chose to do a serial connection between Arduino and p5js. I chose to create a serial connection due to it's simplicity and since my Arduino circuit mainly consisted of only buttons, I thought it wouldn't be too difficult to just keep the Arduino connected the entire time. Moreover, since the Wi-Fi connection does not work in the school campus, I thought that would limit me to only work on it at home.
