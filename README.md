@@ -1,21 +1,21 @@
 Final_Week 2:
 I decided to go ahead with the idea of creating an interactive storytelling. But instead of a classic children's story, I chose to represent real, diverse stories about girls beginning their period as a means of awareness for young girls.
-Interactions
+Interactions: 
   Input: Clicks on the computer, button on Arduino
   Output: Visuals on the computer, LED & sound & Haptics on Arduino
-Description of any external data or library that you are planning to use
+Description of any external data or library that you are planning to use: 
   I would love to try and use a library to draw the characters. Ex. - https://github.com/gaba5/p5.shape.js
-Reference images, texts and projects
+Reference images, texts and projects: 
     https://storymaps.arcgis.com/stories/4f8da19484ea46e0abaacee95312f26c
-Plan for user testing
+Plan for user testing: 
   I will ask different people to follow the instructions and document if there are any instructions they are unclear with
-Short discussion of why your project is relevant:how is it related to our readings? how does it connected to society? why is it important to you?
+Short discussion of why your project is relevant:how is it related to our readings? how does it connected to society? why is it important to you?: 
   I read somewhere that women were not considered in medical related research till about 1993. Because of this, a lot of healthcare today is not mindful of the actual needs of women. Keeping this in mind, I wanted to create a space to tell stories of different women's journey with their health. 
-Pseudocode or an outline of how you plan to organize your code
+Pseudocode or an outline of how you plan to organize your code: 
   In the sketch file 
-Documentation of visual experiments
+Documentation of visual experiments: 
   ![Alt text](IMG_4474.jpg)
-Description of any code written so far
+Description of any code written so far: 
   Currently, I have laid out a rough layout of what conponents will make up the code. 
 
 HW12: 
