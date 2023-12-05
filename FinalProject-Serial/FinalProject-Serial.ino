@@ -39,6 +39,7 @@ void loop() {
     int inByte = Serial.read(); 
     if(inByte == 10) {
        Serial.println(d0); 
+       Serial.println(d1);
     }
   }
     delay(10); 

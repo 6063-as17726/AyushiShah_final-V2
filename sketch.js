@@ -3,42 +3,9 @@ let mSerial;
 
 let readyToRead;
 
-// let connectButton;
-
-// let readyToReceive;
-
-// // project variables
-// let mElls = [];
-
-// function receiveSerial() {
-//   let line = mSerial.readUntil("\n");
-//   trim(line);
-//   if (!line) return;
-
-//   if (line.charAt(0) != "{") {
-//     print("error: ", line);
-//     readyToReceive = true;
-//     return;
-//   }
-
-//   // get data from Serial string
-//   let data = JSON.parse(line).data;
-//   let a0 = data.A0;
-//   let d2 = data.D2;
-
-//   // use data to update project variables
-//   if (d2.isPressed) {
-//     mElls.push({
-//       x: random(width),
-//       y: random(height),
-//       c: map(d2.count % 20, 0, 20, 155, 255),
-//       d: map(a0.value, 0, 4095, 20, 200),
-//     });
-//   }
-
-//   // serial update
-//   readyToReceive = true;
-// }
+function character1() {
+  
+}
 
 function connectToSerial() {
 //if (!mSerial.opened()) {
