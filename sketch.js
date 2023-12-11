@@ -1,9 +1,6 @@
 let mSerial;
 let readyToRead;
 
-let characterWidth = 50; 
-let characterHeight = 150; 
-
 // function character1() {
 //x1, y1
 // }
