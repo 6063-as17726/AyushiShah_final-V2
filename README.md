@@ -21,10 +21,10 @@ Description of any code written so far:
 HW12: 
 I chose to do a serial connection between Arduino and p5js. I chose to create a serial connection due to it's simplicity and since my Arduino circuit mainly consisted of only buttons, I thought it wouldn't be too difficult to just keep the Arduino connected the entire time. Moreover, since the Wi-Fi connection does not work in the school campus, I thought that would limit me to only work on it at home.
 I first wrote the code in the sketch.js file to establish the connection. Next, I wrote the code on Arduino. I referred to the reference video for both the sides of code. Thereafter, I compiled the Arduino file to ensure there was no error, and ran the file. The console on Chrome was initially showing an error of "Failed to open serial port". However, once I closed the serial monitor on Arduino, it did not show the error anymore. 
-![Alt text](IMG_4472.jpg)
+![GpOf98.jpg](https://imgpile.com/images/GpOf98.jpg)
 FSM and circuit diagram respectively 
 
-![Alt text](IMG_4473.jpg)
+![GpOl8b.jpg](https://imgpile.com/images/GpOl8b.jpg)
 Image of circuit
 
 For Next week: 
