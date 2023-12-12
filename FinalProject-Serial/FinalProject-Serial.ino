@@ -41,8 +41,12 @@ void loop() {
     if(inByte == 10) {
       Serial.println(String(d0) + " " + d1);
     }
+    //if(inByte == 18) {
+      //digitalWrite(D7); 
+    //}
   }
     delay(10); 
+  
   
   
 
