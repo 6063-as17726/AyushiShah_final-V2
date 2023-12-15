@@ -100,7 +100,7 @@ function draw() {
   background(0);
 
   if (mSerial.opened() && readyToRead) {
-    mSerial.clear(); 
+    mSerial.clear();  
     mSerial.write(10); 
     readyToRead = false;
   }
