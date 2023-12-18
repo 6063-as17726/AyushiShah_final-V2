@@ -107,6 +107,9 @@ function draw() {
   if (mSerial.opened() && mSerial.availableBytes()>0) {
     let mline = mSerial.readUntil("\n");  
     print(mline);
+    let vals = split(mline, " "); 
+    print(vals[0]); 
+    print(vals[1]); 
     //split mline 
     //print split mline  
     readyToRead = true;
